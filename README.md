@@ -25,7 +25,7 @@
 
 **Kubestrike** performs numerous in depth checks on kubernetes infra to identify the  **security misconfigurations** and challenges that devops engineers/developers are likely to encounter when using Kubernetes, especially in production and at scale.
 
-**kubestrike** is Platform agnostic and works equally well across more than one platform such as self hosted kubernetes, EKS, AKS, GKE etc.
+**kubestrike** is Platform agnostic and works equally well across more than one platform such as self hosted [kubernetes](https://kubernetes.io/), [Amazon EKS](https://aws.amazon.com/eks), [Azure AKS](https://azure.microsoft.com/en-us/services/kubernetes-service/), [Google GKE](https://cloud.google.com/kubernetes-engine) etc.
 
 <p align="center"> <img src="https://raw.githubusercontent.com/vchinnipilli/kubestrike/master/media/pip-install.gif" width="600" height="400"/> </p>
 
@@ -47,6 +47,7 @@
 - [⚡ Contributors](#%E2%9A%A1-Contributors)
 - [⚡ Statistics](#%E2%9A%A1-Statistics)
 - [⚡ License](#%E2%9A%A1-License)
+- [⚡ Support](#%E2%9A%A1-Support)
 - [⚡ Find me here!! <img src="https://raw.githubusercontent.com/vchinnipilli/kubestrike/master/media/wave.gif" width="30px">](#%E2%9A%A1-Find-me-here-img-src%22httpsrawgithubusercontentcomvchinnipillikubestrikemastermediawavegif%22-width%2230px%22)
 
 
@@ -132,7 +133,7 @@ $ python -m kubestrike
 [Create read-only user for Amazon eks](https://docs.aws.amazon.com/eks/latest/userguide/add-user-role.html)\
 [Create read-only user for Azure aks](https://docs.microsoft.com/en-us/azure/aks/control-kubeconfig-access)\
 [Create read-only user for Google gke](https://cloud.google.com/kubernetes-engine/docs/how-to/iam)\
-[Role based access control](https://medium.com/@rschoening/read-only-access-to-kubernetes-cluster-fcf84670b698)
+[Create a subject using Role based access control](https://medium.com/@rschoening/read-only-access-to-kubernetes-cluster-fcf84670b698)
 
 ```bash
 # To grab a token from eks cluster
@@ -202,6 +203,12 @@ Kubestrike is an opensource and [emailware](https://en.wiktionary.org/wiki/email
 ## ⚡ License
 **The MIT License**
 
+## ⚡ Support
+[vasant chinnipilli](https://cloudsecguy.dev) builds and maintains kubestrike to audit and secure kuberentes infrastructure. 
+
+Start with [Documentation - will be available soon](https://cloudsecguy.dev) for quick tutorials and examples.
+
+If you need direct support you can contact me at vchinnipilli@gmail.com.
 
 ## ⚡ Find me here!! <img src="https://raw.githubusercontent.com/vchinnipilli/kubestrike/master/media/wave.gif" width="30px"> 
 [![cloudsecguy.dev](https://img.shields.io/badge/-www.cloudsecguy.dev-brightgreen?style=plastic&label=url:&logoColor=white&link=https://www.cloudsecguy.dev/)](https://www.cloudsecguy.dev/)
