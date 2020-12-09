@@ -129,10 +129,10 @@ $ python -m kubestrike
 ### Authenticated scans
 **Authenticated scan** expects the user to have atleast **read-only** priviliges and provide a token during the scan. please use the below provided links to create read-only users
 
-[Create read-only user for Amazon eks](https://docs.aws.amazon.com/eks/latest/userguide/add-user-role.html)
-&nbsp;&nbsp;&nbsp;&nbsp;[Create read-only user for Azure aks](https://docs.microsoft.com/en-us/azure/aks/control-kubeconfig-access)
-&nbsp;&nbsp;&nbsp;&nbsp;[Create read-only user for Google gke](https://cloud.google.com/kubernetes-engine/docs/how-to/iam)
-&nbsp;&nbsp;&nbsp;&nbsp;[Role based access control](https://medium.com/@rschoening/read-only-access-to-kubernetes-cluster-fcf84670b698)
+[Create read-only user for Amazon eks](https://docs.aws.amazon.com/eks/latest/userguide/add-user-role.html)\
+[Create read-only user for Azure aks](https://docs.microsoft.com/en-us/azure/aks/control-kubeconfig-access)\
+[Create read-only user for Google gke](https://cloud.google.com/kubernetes-engine/docs/how-to/iam)\
+[Role based access control](https://medium.com/@rschoening/read-only-access-to-kubernetes-cluster-fcf84670b698)
 
 ```bash
 # To grab a token from eks cluster
