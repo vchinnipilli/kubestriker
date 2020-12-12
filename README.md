@@ -194,10 +194,10 @@ Kubestrike is an opensource and [emailware](https://en.wiktionary.org/wiki/email
 ## ⚡ Statistics
 
 <a href="https://github.com/vchinnipilli/kubestrike">
-  <img align="center" src="https://github-readme-stats.vercel.app/api?username=kubestrike&orgs=vchinnipilli&repo=kubestrike&show_icons=true&layout=compact" />
+  <img align="center" src="https://github-readme-stats.vercel.app/api?username=kubestrike&orgs=vchinnipilli&show_icons=true&layout=compact" />
 </a>
 <a href="https://github.com/vchinnipilli/kubestrike">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=kubestrike&orgs=vchinnipilli&repo=kubestrike&layout=compact" />
+  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=kubestrike&orgs=vchinnipilli&layout=compact" />
 </a>
 
 ## ⚡ License
@@ -211,7 +211,7 @@ Start with [Documentation - will be available soon](https://cloudsecguy.dev) for
 If you need direct support you can contact me at vchinnipilli@gmail.com.
 
 ## ⚡ Find me here!! <img src="https://raw.githubusercontent.com/vchinnipilli/kubestrike/master/media/wave.gif" width="30px"> 
-[![cloudsecguy.dev](https://img.shields.io/badge/-www.cloudsecguy.dev-brightgreen?style=plastic&label=url:&logoColor=white&link=https://www.cloudsecguy.dev/)](https://www.cloudsecguy.dev/)
+[![cloudsecguy.dev](https://img.shields.io/badge/-https://www.cloudsecguy.dev-brightgreen?style=plastic&label=web:&logoColor=white&link=https://www.cloudsecguy.dev/)](https://www.cloudsecguy.dev/)
 [![Linkedin Badge](https://img.shields.io/badge/-vasantChinnipilli-blue?style=plastic&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/vasantreddy/)](https://www.linkedin.com/in/vasantreddy/)
 [![Instagram Badge](https://img.shields.io/badge/-vasantchinnipilli-orange?style=plastic&logo=instagram&logoColor=white&link=https://instagram.com/vasant_reddy/)](https://instagram.com/vasant_reddy)
 [![Medium Badge](https://img.shields.io/badge/-@vasantchinnipilli-03a57a?style=plastic&labelColor=000000&logo=Medium&link=https://medium.com/@vasantkumarchinnipilli/)](https://medium.com/@vasantkumarchinnipilli)
