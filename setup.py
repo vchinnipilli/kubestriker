@@ -14,12 +14,18 @@ setuptools.setup(
     description="A Blazing fast Security Auditing tool for Kuberentes",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/kubestrike",
+    url="https://github.com/vchinnipilli/kubestrike",
     packages=setuptools.find_packages(),
     classifiers=[
-        "Programming Language :: Python :: 3",
-        "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
-        "Operating System :: OS Independent",
+        'Environment :: Console',
+        'Intended Audience :: Security Professionals'
+        'Intended Audience :: Auditors'
+        'Intended Audience :: Developers',
+        'Intended Audience :: System Administrators',
+        'Programming Language :: Python :: 3',
+        'Operating System :: OS Independent'
+        'Topic :: Security',
+        'Topic :: Software Development :: Security Auditing Tools'
     ],
     python_requires='>=3.0',
     install_requires=requirements
