@@ -8,7 +8,7 @@ with open('requirements.txt') as f:
 
 setuptools.setup(
     name="kubestrike",
-    version="v1.0.0",
+    version="v1.0",
     author="vasant chinnipilli",
     author_email="vchinnipilli@gmail.com.com",
     description="A Blazing fast Security Auditing tool for Kuberentes",
@@ -16,17 +16,15 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/vchinnipilli/kubestrike",
     packages=setuptools.find_packages(),
+    python_requires='>=3.0',
+    install_requires=requirements,
     classifiers=[
         'Environment :: Console',
-        'Intended Audience :: Security Professionals'
-        'Intended Audience :: Auditors'
         'Intended Audience :: Developers',
         'Intended Audience :: System Administrators',
-        'Programming Language :: Python :: 3',
-        'Operating System :: OS Independent'
+        'Operating System :: OS Independent',
+        'License :: OSI Approved :: MIT License',
         'Topic :: Security',
-        'Topic :: Software Development :: Security Auditing Tools'
-    ],
-    python_requires='>=3.0',
-    install_requires=requirements
+        'Topic :: Software Development :: Testing'
+    ]
 )
