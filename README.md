@@ -194,10 +194,10 @@ Kubestrike is an opensource and [emailware](https://en.wiktionary.org/wiki/email
 ## ⚡ Statistics
 
 <a href="https://github.com/vchinnipilli/kubestrike">
-  <img align="center" src="https://github-readme-stats.vercel.app/api?username=vchinnipilli&show_icons=true&layout=compact" />
+  <img align="center" src="https://github-readme-stats.vercel.app/api?username=kubestrike&orgs=vchinnipilli&repo=kubestrike&show_icons=true&layout=compact" />
 </a>
 <a href="https://github.com/vchinnipilli/kubestrike">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=vchinnipilli&repo=kubestrike&layout=compact" />
+  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=kubestrike&orgs=vchinnipilli&repo=kubestrike&layout=compact" />
 </a>
 
 ## ⚡ License
