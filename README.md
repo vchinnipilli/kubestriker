@@ -32,26 +32,26 @@
 
 ### Table of content
 
-- [⚡ How To Install](#%E2%9A%A1-How-To-Install)
+- [How To Install](#How-To-Install)
   - [Clone the repo and install](#Clone-the-repo-and-install)
   - [Install using pip](#Install-using-pip)
   - [How to spin up kubestrike container](#How-to-spin-up-kubestrike-container)
-- [⚡ Types of Scans](#%E2%9A%A1-Types-of-Scans)
+- [Types of Scans](#Types-of-Scans)
   - [Authenticated scans](#Authenticated-scans)
   - [Unauthenticated scans](#Unauthenticated-scans)
     - [Identifying an open Insecure port on kuberentes master node](#Identifying-an-open-Insecure-port-on-kuberentes-master-node)
     - [Identifying a worker Node with kubelet readwrite and readonly ports open](#Identifying-a-worker-Node-with-kubelet-readwrite-and-readonly-ports-open)
-- [⚡ Current Capabilities](#%E2%9A%A1-Current-Capabilities)
-- [⚡ Future improvements](#%E2%9A%A1-Future-improvements)
-- [⚡ Suggestions](#%E2%9A%A1-Suggestions)
-- [⚡ Contributors](#%E2%9A%A1-Contributors)
-- [⚡ Statistics](#%E2%9A%A1-Statistics)
-- [⚡ License](#%E2%9A%A1-License)
-- [⚡ Support](#%E2%9A%A1-Support)
-- [⚡ Find me here!! <img src="https://raw.githubusercontent.com/vchinnipilli/kubestrike/master/media/wave.gif" width="30px">](#%E2%9A%A1-Find-me-here-img-src%22httpsrawgithubusercontentcomvchinnipillikubestrikemastermediawavegif%22-width%2230px%22)
+- [Current Capabilities](#Current-Capabilities)
+- [Future improvements](#Future-improvements)
+- [Suggestions](#Suggestions)
+- [Contributors](#Contributors)
+- [Statistics](#Statistics)
+- [License](#License)
+- [Support](#Support)
+- [Find me here!! <img src="https://raw.githubusercontent.com/vchinnipilli/kubestrike/master/media/wave.gif" width="30px">](#Find-me-here-img-src%22httpsrawgithubusercontentcomvchinnipillikubestrikemastermediawavegif%22-width%2230px%22)
 
 
-## ⚡ How To Install
+##  How To Install
 
 ### Clone the repo and install
 
@@ -127,7 +127,7 @@ $ python -m kubestrike
 ```
 <p align="center"> <img src="https://raw.githubusercontent.com/vchinnipilli/kubestrike/master/media/docker.gif" width="600" height="400"/> </p>
 
-## ⚡ Types of Scans
+##  Types of Scans
 
 ### Authenticated scans
 **Authenticated scan** expects the user to have atleast **read-only** priviliges and provide a token during the scan. please use the below provided links to create read-only users
@@ -163,7 +163,7 @@ $ cat /run/secrets/kubernetes.io/serviceaccount/token
 #### Identifying a worker Node with kubelet readwrite and readonly ports open
 <p align="center"> <img src="https://raw.githubusercontent.com/vchinnipilli/kubestrike/master/media/node_scan.gif" width="600" height="400"/> </p>
 
-## ⚡ Current Capabilities
+##  Current Capabilities
 
 * Scans Self Managed and cloud provider managed kuberentes infra
 * Reconnaissance phase checks for various services or open ports
@@ -180,20 +180,20 @@ $ cat /run/secrets/kubernetes.io/serviceaccount/token
 * Elaborative report with detailed explanation
 
 
-## ⚡ Future improvements
+##  Future improvements
 
 * Automated exploitation based on the issues identified
 * api and cicd automation friendly
 * A Decent FrontEnd to make the lives easier
 
-## ⚡ Suggestions
+##  Suggestions
 
 Kubestrike is an opensource and [emailware](https://en.wiktionary.org/wiki/emailware). Meaning, if you liked using this tool or it has helped you in any way or if you have any suggestions/improvements, I'd like you send me an email at <vchinnipilli@gmail.com> about anything you'd want to say about this tool. I'd really appreciate it!
 
 
-## ⚡ Contributors
+##  Contributors
 
-## ⚡ Statistics
+##  Statistics
 
 <a href="https://github.com/vchinnipilli/kubestrike">
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=kubestrike&orgs=vchinnipilli&show_icons=true&layout=compact" />
@@ -202,17 +202,17 @@ Kubestrike is an opensource and [emailware](https://en.wiktionary.org/wiki/email
   <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=kubestrike&orgs=vchinnipilli&layout=compact" />
 </a>
 
-## ⚡ License
+##  License
 **The MIT License**
 
-## ⚡ Support
+##  Support
 [vasant chinnipilli](https://cloudsecguy.dev) builds and maintains kubestrike to audit and secure kuberentes infrastructure. 
 
 Start with [Documentation - will be available soon](https://cloudsecguy.dev) for quick tutorials and examples.
 
 If you need direct support you can contact me at vchinnipilli@gmail.com.
 
-## ⚡ Find me here!! <img src="https://raw.githubusercontent.com/vchinnipilli/kubestrike/master/media/wave.gif" width="30px"> 
+##  Find me here!! <img src="https://raw.githubusercontent.com/vchinnipilli/kubestrike/master/media/wave.gif" width="30px"> 
 [![cloudsecguy.dev](https://img.shields.io/badge/-https://www.cloudsecguy.dev-brightgreen?style=plastic&label=web:&logoColor=white&link=https://www.cloudsecguy.dev/)](https://www.cloudsecguy.dev/)
 [![Linkedin Badge](https://img.shields.io/badge/-vasantChinnipilli-blue?style=plastic&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/vasantreddy/)](https://www.linkedin.com/in/vasantreddy/)
 [![Instagram Badge](https://img.shields.io/badge/-vasantchinnipilli-orange?style=plastic&logo=instagram&logoColor=white&link=https://instagram.com/vasant_reddy/)](https://instagram.com/vasant_reddy)
