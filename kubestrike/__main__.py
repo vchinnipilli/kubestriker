@@ -110,11 +110,9 @@ def kube_services_process(option, file_obj, host, port=None):
                 while count <= 3:
                     token = getpass.getpass("Provide token : ")
                     token = token.strip()
-                    end_point_url = "https://" + end_point
-                    end_point_url1 = "https://" + end_point + '/api'
+                    end_point_url = "https://" + end_point + '/api'
                     response_status = check_service(end_point_url, token)
-                    response_status1 = check_service(end_point_url1, token)
-                    if response_status == False or response_status1 == False:
+                    if response_status == False:
                         cowsay("Could not autheticate with the provided token")
                         count = count + 1
                         if count == 3:
@@ -245,7 +243,7 @@ def check_service(url, token):
         else:
             decoded_data = yaml.safe_load(decode_jwt_token_data(token))
             namespace = decoded_data.get('kubernetes.io/serviceaccount/namespace')
-            namespace_url = url+"/api/v1/namespaces/"+namespace
+            namespace_url = url+"/api/v1/namespaces/"+namespace+"/pods"
             namespace_response = session.get(namespace_url, timeout=5)
             if namespace_response.status_code == 200:
                 return True

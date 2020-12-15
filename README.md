@@ -16,7 +16,6 @@
 ![Last Commit Date](https://img.shields.io/github/last-commit/vchinnipilli/kubestrike?style=plastic)
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fvchinnipilli%2Fkubestrike&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Visitors&edge_flat=false)](https://hits.seeyoufarm.com)
 [![GitHub followers](https://img.shields.io/github/followers/vchinnipilli.svg?style=plastic&label=Follow&maxAge=2592000)](https://github.com/vchinnipilli?tab=followers)
-[![GitHub stars](https://img.shields.io/github/stars/vchinnipilli/kubestrike.svg?style=plastic&label=Star&maxAge=2592000)](https://GitHub.com/kubestrike/kubestrike/)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg?style=plastic)](https://github.com/vchinnipilli/kubestrike)
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg?style=plastic)](https://www.python.org/)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=plastic)](https://opensource.org/licenses/MIT)
