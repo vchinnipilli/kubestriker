@@ -12,7 +12,7 @@
 ![Downloads](https://img.shields.io/github/downloads/vchinnipilli/kubestrike/total?style=plastic)
 ![Release](https://img.shields.io/github/release-date/vchinnipilli/kubestrike?style=plastic)
 ![Stars Badge](https://img.shields.io/github/stars/vchinnipilli/kubestrike?style=plastic)
-![Docker Pulls](https://img.shields.io/docker/pulls/:v1.0.1?style=plastic)
+![Docker Pulls](https://img.shields.io/docker/pulls/cloudsecguy/kubestrike?style=plastic)
 ![Last Commit Date](https://img.shields.io/github/last-commit/vchinnipilli/kubestrike?style=plastic)
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fvchinnipilli%2Fkubestrike&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Visitors&edge_flat=false)](https://hits.seeyoufarm.com)
 [![GitHub followers](https://img.shields.io/github/followers/vchinnipilli.svg?style=plastic&label=Follow&maxAge=2592000)](https://github.com/vchinnipilli?tab=followers)
