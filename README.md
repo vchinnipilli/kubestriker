@@ -3,7 +3,7 @@
   <a href="https://github.com/vchinnipilli/kubestrike"><img align="center" src="https://raw.githubusercontent.com/vchinnipilli/kubestrike/master/media/kube-strike.png"  height="400" width="400"></a>
 </h1>
 
-<h4 align="center"> A Blazing fast Security Auditing tool for <a href="https://kubernetes.io/" target="_blank">Kuberentes</a>!!</h4>
+<h4 align="center"> A Blazing fast Security Auditing tool for <a href="https://kubernetes.io/" target="_blank">Kubernetes</a>!!</h4>
 
 ![Python](https://img.shields.io/badge/python-v3.0+-blue.svg?style=plastic)
 ![Dependencies](https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen.svg?style=plastic)
@@ -38,7 +38,7 @@
 - [Types of Scans](#Types-of-Scans)
   - [Authenticated scans](#Authenticated-scans)
   - [Unauthenticated scans](#Unauthenticated-scans)
-    - [Identifying an open Insecure port on kuberentes master node](#Identifying-an-open-Insecure-port-on-kuberentes-master-node)
+    - [Identifying an open Insecure port on kubernetes master node](#Identifying-an-open-Insecure-port-on-kubernetes-master-node)
     - [Identifying a worker Node with kubelet readwrite and readonly ports open](#Identifying-a-worker-Node-with-kubelet-readwrite-and-readonly-ports-open)
 - [Current Capabilities](#Current-Capabilities)
 - [Future improvements](#Future-improvements)
@@ -131,7 +131,7 @@ $ python -m kubestrike
 ##  Types of Scans
 
 ### Authenticated scans
-**Authenticated scan** expects the user to have atleast **read-only** priviliges and provide a token during the scan. please use the below provided links to create read-only users
+**Authenticated scan** expects the user to have atleast **read-only** privileges and provide a token during the scan. please use the below provided links to create read-only users
 
 [Create read-only user for Amazon eks](https://docs.aws.amazon.com/eks/latest/userguide/add-user-role.html)\
 [Create read-only user for Azure aks](https://docs.microsoft.com/en-us/azure/aks/control-kubeconfig-access)\
@@ -158,7 +158,7 @@ $ cat /run/secrets/kubernetes.io/serviceaccount/token
 ### Unauthenticated scans
 **Unauthenticated scan** will be successful incase of anonymous access is permitted on the target cluster
 
-#### Identifying an open Insecure port on kuberentes master node
+#### Identifying an open Insecure port on kubernetes master node
 <p align="center"> <img src="https://raw.githubusercontent.com/vchinnipilli/kubestrike/master/media/insecure_port.gif" width="600" height="400"/> </p>
 
 #### Identifying a worker Node with kubelet readwrite and readonly ports open
@@ -166,7 +166,7 @@ $ cat /run/secrets/kubernetes.io/serviceaccount/token
 
 ##  Current Capabilities
 
-* Scans Self Managed and cloud provider managed kuberentes infra
+* Scans Self Managed and cloud provider managed kubernetes infra
 * Reconnaissance phase checks for various services or open ports
 * Performs automated scans incase of insecure, readwrite or readonly services are enabled
 * Performs both authenticated scans and unauthenticated scans
@@ -207,7 +207,7 @@ Kubestrike is an opensource and [emailware](https://en.wiktionary.org/wiki/email
 **The MIT License**
 
 ##  Support
-[vasant chinnipilli](https://cloudsecguy.dev) builds and maintains kubestrike to audit and secure kuberentes infrastructure. 
+[vasant chinnipilli](https://cloudsecguy.dev) builds and maintains kubestrike to audit and secure kubernetes infrastructure. 
 
 Start with [Documentation - will be available soon](https://cloudsecguy.dev) for quick tutorials and examples.
 
