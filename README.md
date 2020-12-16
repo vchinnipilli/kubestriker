@@ -119,7 +119,7 @@ $ python -m kubestrike
 $ docker run -it --rm -v /Users/vasantchinnipilli/.kube/config:/root/.kube/config -v "$(pwd)":/kubestrike --name kubestrike cloudsecguy/kubestrike:v1.0.1
 
 # Replace the user vasantchinnipilli above with your username or absolute path of kube config file
-$ docker run -it --rm -v /Users/<yourusername>/.kube/config:/root/.kube/config -v "$(pwd)":/kubestrike --name kubestrike :v1.0.1
+$ docker run -it --rm -v /Users/<yourusername>/.kube/config:/root/.kube/config -v "$(pwd)":/kubestrike --name kubestrike cloudsecguy/kubestrike:v1.0.1
 
 # Gearing up Kubestrike
 $ python -m kubestrike
