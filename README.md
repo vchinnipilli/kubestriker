@@ -128,7 +128,7 @@ $ python -m kubestriker
 ## Types of Scans
 
 ### Authenticated scans
-**Authenticated scan** expects the user to have atleast **read-only** priviliges and provide a token during the scan. please use the below provided links to create read-only users
+**Authenticated scan** expects the user to have atleast **read-only** privileges and provide a token during the scan. please use the below provided links to create read-only users
 
 [Create read-only user for Amazon eks](https://docs.aws.amazon.com/eks/latest/userguide/add-user-role.html)\
 [Create read-only user for Azure aks](https://docs.microsoft.com/en-us/azure/aks/control-kubeconfig-access)\
