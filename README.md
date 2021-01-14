@@ -44,6 +44,7 @@
 - [Contributors](#Contributors)
 - [Statistics](#Statistics)
 - [License](#License)
+- [Support](#Support)
 - [Find me here!! <img src="https://raw.githubusercontent.com/vchinnipilli/kubestriker/master/media/wave.gif" width="30px">](#Find-me-here-img-src%22httpsrawgithubusercontentcomvchinnipillikubestrikermastermediawavegif%22-width%2230px%22)
 
 
@@ -106,6 +107,8 @@ $ python -m kubestriker
 ```
 
 ### How to spin up kubestriker container
+
+[Use this link to view the Kubestrike container latest releases](https://hub.docker.com/repository/docker/cloudsecguy/kubestriker)
 
 ```bash
 # Spinning up the kubestriker Container
@@ -199,6 +202,12 @@ Kubestriker is an opensource and [emailware](https://en.wiktionary.org/wiki/emai
 ## License
 **Apache License**
 
+##  Support
+[vasant chinnipilli](https://cloudsecguy.dev) builds and maintains kubestrike to audit and secure kuberentes infrastructure. 
+
+Start with [Documentation - will be available soon](https://cloudsecguy.dev) for quick tutorials and examples.
+
+If you need direct support you can contact me at vchinnipilli@gmail.com.
 
 ## Find me here!! <img src="https://raw.githubusercontent.com/vchinnipilli/kubestriker/master/media/wave.gif" width="30px"> 
 [![cloudsecguy.dev](https://img.shields.io/badge/-https://www.cloudsecguy.dev-brightgreen?style=plastic&label=web:&logoColor=white&link=https://www.cloudsecguy.dev/)](https://www.cloudsecguy.dev/)
