@@ -1,9 +1,9 @@
-<h1>How to contribute to Kubestrike</h1>
+<h1>How to contribute to Kubestriker</h1>
 <br>
 
 Hi there! we are thrilled that you'd like to contribute to this project. Your help is essential for keeping it great. 🤝
 
-Please note that this project is released with a [Contributor Code of Conduct](https://raw.githubusercontent.com/kubestrike/kubestrike/master/code_of_conduct.md). By participating in this project you agree to abide by its terms.
+Please note that this project is released with a [Contributor Code of Conduct](https://raw.githubusercontent.com/kubestriker/kubestriker/master/code_of_conduct.md). By participating in this project you agree to abide by its terms.
 
 ## Issues and PRs
 

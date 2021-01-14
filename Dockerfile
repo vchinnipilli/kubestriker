@@ -1,16 +1,16 @@
 FROM python:3.8.0-slim as builder
 RUN apt-get update -y \
 && apt-get clean -y
-WORKDIR /kubestrike
+WORKDIR /kubestriker
 RUN pip install --upgrade pip \
 && pip install prompt-toolkit==1.0.14 \
-&& pip install kubestrike
+&& pip install kubestriker
 
 
 FROM python:3.8.0-slim
 LABEL maintainer="vasant kumar chinnipilli"
 COPY --from=builder /usr/local/lib/python3.8/site-packages /usr/local/lib/python3.8/site-packages
-COPY --from=builder /kubestrike /kubestrike
-WORKDIR /kubestrike
+COPY --from=builder /kubestriker /kubestriker
+WORKDIR /kubestriker
 ENV PATH=/root/.local/bin:$PATH
 CMD ["bash"]

@@ -2,18 +2,18 @@ import warnings
 from colored import stylize
 import yaml
 from colored import fg
-from kubestrike.rbac_authorization_v1api import RbacAuthorizationV1Api
-from kubestrike.validate_roles import Validate_Roles
-from kubestrike.core_v1api import CoreV1Api
-from kubestrike.apps_v1api import AppsV1Api
-from kubestrike.policy_v1beta1api import PolicyV1beta1Api
-from kubestrike.pvl_containers import PvlContainers
-from kubestrike.psp_role import PspRole
-from kubestrike.extensions_v1beta1api import ExtensionsV1beta1Api
-from kubestrike.jwt_token_converter import decode_jwt_token_data
-from kubestrike.bars import prefix, scan_status, service_open, resource_available, print_msg_box
-from kubestrike.kubelet_ro import Kubelet_RO
-from kubestrike.kubelet_rw import Kubelet_RW
+from kubestriker.rbac_authorization_v1api import RbacAuthorizationV1Api
+from kubestriker.validate_roles import Validate_Roles
+from kubestriker.core_v1api import CoreV1Api
+from kubestriker.apps_v1api import AppsV1Api
+from kubestriker.policy_v1beta1api import PolicyV1beta1Api
+from kubestriker.pvl_containers import PvlContainers
+from kubestriker.psp_role import PspRole
+from kubestriker.extensions_v1beta1api import ExtensionsV1beta1Api
+from kubestriker.jwt_token_converter import decode_jwt_token_data
+from kubestriker.bars import prefix, scan_status, service_open, resource_available, print_msg_box
+from kubestriker.kubelet_ro import Kubelet_RO
+from kubestriker.kubelet_rw import Kubelet_RW
 
 warnings.filterwarnings("ignore")
 
