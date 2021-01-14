@@ -109,10 +109,10 @@ $ python -m kubestriker
 
 ```bash
 # Spinning up the kubestriker Container
-$ docker run -it --rm -v /Users/vasantchinnipilli/.kube/config:/root/.kube/config -v "$(pwd)":/kubestriker --name kubestriker cloudsecguy/kubestriker
+$ docker run -it --rm -v /Users/vasantchinnipilli/.kube/config:/root/.kube/config -v "$(pwd)":/kubestriker --name kubestriker cloudsecguy/kubestriker:v1.0.0
 
 # Replace the user vasantchinnipilli above with your username or absolute path of kube config file
-$ docker run -it --rm -v /Users/<yourusername>/.kube/config:/root/.kube/config -v "$(pwd)":/kubestriker --name kubestriker cloudsecguy/kubestriker
+$ docker run -it --rm -v /Users/<yourusername>/.kube/config:/root/.kube/config -v "$(pwd)":/kubestriker --name kubestriker cloudsecguy/kubestriker:v1.0.0
 
 # Gearing up Kubestriker
 $ python -m kubestriker
