@@ -3,7 +3,7 @@
   <a href="https://github.com/vchinnipilli/kubestriker"><img align="center" src="https://raw.githubusercontent.com/vchinnipilli/kubestriker/master/media/kube-striker.png"  height="400" width="400"></a>
 </h1>
 
-<h4 align="center"> A Blazing fast Security Auditing tool for <a href="https://kubernetes.io/" target="_blank">Kuberentes</a>!!</h4>
+<h4 align="center"> A Blazing fast Security Auditing tool for <a href="https://kubernetes.io/" target="_blank">kubernetes</a>!!</h4>
 
 ![Python](https://img.shields.io/badge/python-v3.0+-blue.svg?style=plastic)
 ![Dependencies](https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen.svg?style=plastic)
@@ -35,7 +35,7 @@
 - [Types of Scans](#Types-of-Scans)
   - [Authenticated scans](#Authenticated-scans)
   - [Unauthenticated scans](#Unauthenticated-scans)
-    - [Identifying an open Insecure port on kuberentes master node](#Identifying-an-open-Insecure-port-on-kuberentes-master-node)
+    - [Identifying an open Insecure port on kubernetes master node](#Identifying-an-open-Insecure-port-on-kubernetes-master-node)
     - [Identifying a worker Node with kubelet readwrite and readonly ports open](#Identifying-a-worker-Node-with-kubelet-readwrite-and-readonly-ports-open)
 - [Current Capabilities](#Current-Capabilities)
 - [Future improvements](#Future-improvements)
@@ -155,7 +155,7 @@ $ cat /run/secrets/kubernetes.io/serviceaccount/token
 ### Unauthenticated scans
 **Unauthenticated scan** will be successful incase of anonymous access is permitted on the target cluster
 
-#### Identifying an open Insecure port on kuberentes master node
+#### Identifying an open Insecure port on kubernetes master node
 <p align="center"> <img src="https://raw.githubusercontent.com/vchinnipilli/kubestriker/master/media/insecure_port.gif" width="600" height="400"/> </p>
 
 #### Identifying a worker Node with kubelet readwrite and readonly ports open
@@ -163,7 +163,7 @@ $ cat /run/secrets/kubernetes.io/serviceaccount/token
 
 ## Current Capabilities
 
-* Scans Self Managed and cloud provider managed kuberentes infra
+* Scans Self Managed and cloud provider managed kubernetes infra
 * Reconnaissance phase checks for various services or open ports
 * Performs automated scans incase of insecure, readwrite or readonly services are enabled
 * Performs both authenticated scans and unauthenticated scans
@@ -204,7 +204,7 @@ Kubestriker is an opensource and [emailware](https://en.wiktionary.org/wiki/emai
 **Apache License**
 
 ##  Support
-[vasant chinnipilli](https://cloudsecguy.dev) builds and maintains kubestriker to audit and secure kuberentes infrastructure. 
+[vasant chinnipilli](https://cloudsecguy.dev) builds and maintains kubestriker to audit and secure kubernetes infrastructure. 
 
 Start with [Documentation - will be available soon](https://cloudsecguy.dev) for quick tutorials and examples.
 
