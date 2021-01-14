@@ -1,6 +1,6 @@
 # Read data from files
 import json
-from kubestrike.bars import prefix
+from kubestriker.bars import prefix
 
 dangerous_caps = [
     "*", "DAC_READ_SEARCH", "LINUX_IMMUTABLE", "NET_BROADCAST", "NET_ADMIN", "IPC_LOCK", "IPC_OWNER",

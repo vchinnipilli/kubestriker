@@ -67,6 +67,7 @@ class ValidateInput(object):
 
     def config_file_to_host_list(self, file):
         host_list = []
+        host_map = {}
         if file == 'default':
             file_full_path = f'{str(Path.home())}/.kube/config'
         else:
@@ -75,5 +76,6 @@ class ValidateInput(object):
             file_data = file.read()
         file_data = yaml.safe_load(file_data)
         for cluster_data in file_data.get('clusters'):
-            host_list.append(cluster_data.get('cluster').get('server'))
-        return host_list
+            host_list.append(cluster_data.get('name'))
+            host_map.update({cluster_data.get('name'): cluster_data.get('cluster').get('server')})
+        return host_list, host_map

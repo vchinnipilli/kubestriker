@@ -5,12 +5,12 @@ import yaml
 from pyfiglet import Figlet
 from colored import fg, bg, attr, fore, style, stylize
 from selectmenu import SelectMenu
-from kubestrike.validate_input import ValidateInput
-from kubestrike.service_discovery import ServiceDiscovery
-from kubestrike.service_hunt import ServiceHunt
-from kubestrike.cmd_exec import cmd_exec
-from kubestrike.bars import cowsay
-from kubestrike.jwt_token_converter import decode_jwt_token_data
+from kubestriker.validate_input import ValidateInput
+from kubestriker.service_discovery import ServiceDiscovery
+from kubestriker.service_hunt import ServiceHunt
+from kubestriker.cmd_exec import cmd_exec
+from kubestriker.bars import cowsay
+from kubestriker.jwt_token_converter import decode_jwt_token_data
 menu = SelectMenu()
 
 
@@ -52,11 +52,12 @@ def main():
                 input_file = input("Enter the full path of custom config file: ")
             else:
                 input_file = 'default'
-            host_url_list = ValidateInput().config_file_to_host_list(input_file)
-            menu.add_choices(host_url_list)
+            cluster_list, host_url_map = ValidateInput().config_file_to_host_list(input_file)
+            menu.add_choices(cluster_list)
             print("")
-            result = menu.select("Choose one of the below url:")
-            host, port = ValidateInput().input_to_host(result)
+            result = menu.select("Choose one of the below cluster:")
+            host_url = host_url_map.get(result)
+            host, port = ValidateInput().input_to_host(host_url)
             if not host:
                 cowsay("Input is not valid")
                 return
@@ -272,14 +273,14 @@ def get_git_version(end_point):
 
 
 if __name__ == '__main__':
-    x = (stylize((Figlet(font='slant', justify='center').renderText('>>>-kube-strike->')), fg("orange_1")))
+    x = (stylize((Figlet(font='slant', justify='center').renderText('>>-kube-striker->')), fg("orange_1")))
     print(stylize('\n  ###########################################################################',
                   fg("light_sky_blue_1")))
     print(x)
     t = (stylize('  ###########################################################################',
                  fg("light_sky_blue_1")))
     print(t + fore.LIGHT_RED + '   v1.0.0\n' + style.RESET)
-    print(stylize('[+] Gearing up Kube-Strike......................................................\n', fg("green_1")))
+    print(stylize('[+] Gearing up Kube-Striker..................................................\n', fg("green_1")))
     try:
         main()
     except KeyboardInterrupt:

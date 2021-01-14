@@ -1,4 +1,4 @@
-from kubestrike.bars import prefix
+from kubestriker.bars import prefix
 
 class PspRole(object):
     def __init__(self):
