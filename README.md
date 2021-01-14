@@ -11,12 +11,11 @@
 [![GitHub Issues](https://img.shields.io/github/issues/vchinnipilli/kubestriker?style=plastic)](https://github.com/vchinnipilli/kubestrike/issues)
 ![Release](https://img.shields.io/github/release-date/vchinnipilli/kubestriker?style=plastic)
 ![Stars Badge](https://img.shields.io/github/stars/vchinnipilli/kubestriker?style=plastic)
-![Docker Pulls](https://img.shields.io/docker/pulls/cloudsecguy/kubestriker?style=plastic)
 ![Last Commit Date](https://img.shields.io/github/last-commit/vchinnipilli/kubestriker?style=plastic)
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fvchinnipilli%2Fkubestriker&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Visitors&edge_flat=false)](https://hits.seeyoufarm.com)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg?style=plastic)](https://github.com/vchinnipilli/kubestriker)
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg?style=plastic)](https://www.python.org/)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg?style=plastic)](https://opensource.org/licenses/MIT)
+[![License](https://img.shields.io/badge/license-Apache_License_2.0-blue.svg?style=plastic)](https://opensource.org/licenses/Apache_License_2.0)
 
 ### Basic Overview
 
@@ -110,7 +109,7 @@ $ python -m kubestriker
 
 ### How to spin up kubestriker container
 
-[Use this link to view the Kubestrike container latest releases](https://hub.docker.com/repository/docker/cloudsecguy/kubestriker)
+[Use this link to view the Kubestriker container latest releases](https://hub.docker.com/repository/docker/cloudsecguy/kubestriker)
 
 ```bash
 # Spinning up the kubestriker Container
@@ -205,7 +204,7 @@ Kubestriker is an opensource and [emailware](https://en.wiktionary.org/wiki/emai
 **Apache License**
 
 ##  Support
-[vasant chinnipilli](https://cloudsecguy.dev) builds and maintains kubestrike to audit and secure kuberentes infrastructure. 
+[vasant chinnipilli](https://cloudsecguy.dev) builds and maintains kubestriker to audit and secure kuberentes infrastructure. 
 
 Start with [Documentation - will be available soon](https://cloudsecguy.dev) for quick tutorials and examples.
 
