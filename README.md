@@ -52,7 +52,9 @@
 
 ### Clone the repo and install
 
-To install this tool or clone and run this application, you'll need [Git](https://git-scm.com), [python3](https://www.python.org/downloads/) and [pip](https://pypi.org/project/pip/)  installed on your computer. From your command line:
+To install this tool or clone and run this application, you'll need [Git](https://git-scm.com), [python3](https://www.python.org/downloads/) and [pip](https://pypi.org/project/pip/)  installed on your computer. It is advised you install this tool in [virtual environment](https://virtualenv.pypa.io/en/latest/installation.html)
+
+From your command line:
 
 ```bash
 
