@@ -17,9 +17,13 @@ setuptools.setup(
     url="https://github.com/vchinnipilli/kubestriker",
     packages=setuptools.find_packages(),
     classifiers=[
-        "Programming Language :: Python :: 3",
-        "License :: OSI Approved :: Apache Software License",
-        "Operating System :: OS Independent",
+        'Environment :: Console',
+        'Intended Audience :: Developers',
+        'Intended Audience :: System Administrators',
+        'Operating System :: OS Independent',
+        'License :: OSI Approved :: Apache Software License',
+        'Topic :: Security',
+        'Topic :: Software Development :: Testing'
     ],
     python_requires='>=3.0',
     install_requires=requirements
