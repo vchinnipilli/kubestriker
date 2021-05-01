@@ -8,7 +8,7 @@ with open('requirements.txt') as f:
 
 setuptools.setup(
     name="kubestriker",
-    version="v1.0.0",
+    version="1.1.0",
     author="vasant chinnipilli",
     author_email="vchinnipilli@gmail.com.com",
     description="A Blazing fast Security Auditing tool for Kuberentes",
