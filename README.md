@@ -201,7 +201,7 @@ Kubestriker is an opensource and [emailware](https://en.wiktionary.org/wiki/emai
 </a>
 
 ## License
-**Apache License**
+**[Apache License 2.0](https://github.com/vchinnipilli/kubestriker/blob/master/LICENSE)**
 
 ##  Support
 [vasant chinnipilli](https://cloudsecguy.dev) builds and maintains kubestriker to audit and secure kubernetes infrastructure. 
