@@ -12,6 +12,7 @@ setuptools.setup(
     author="vasant chinnipilli",
     author_email="vchinnipilli@gmail.com.com",
     description="A Blazing fast Security Auditing tool for Kuberentes",
+    license="Apache-2.0",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/vchinnipilli/kubestriker",
