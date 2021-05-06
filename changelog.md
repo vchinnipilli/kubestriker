@@ -6,6 +6,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+<a name="1.2.0"></a>
+## 1.2.0 (2021-05-06)
+
+### Fixes
+* **Documentation:** Updated the Documentation to reflect new Changes
+
+### Features
+* **CICD Integration:** A new version of container image that can be used in CICD tools
+* **Web Application Version:** A new WebApplication version of kubestriker is launched
+
 
 <a name="1.1.0"></a>
 ## 1.1.0 (2021-01-15)
