@@ -98,6 +98,7 @@ def kube_services_process(option, file_obj, host, port=None):
         if apiserver_secure:
             end_point = service_discovery_result.get('apiserver_secure').get('end_point')
             get_git_version(end_point)
+
             menu.add_choices(['authenticated scan', 'unauthenticated scan'])
             print("")
             option = menu.select("Choose one of the below option:")
@@ -128,14 +129,22 @@ def kube_services_process(option, file_obj, host, port=None):
                 print("")
                 checks_status = menu.select("Choose checks option")
                 if checks_status == 'Perform individual Checks':
-                    menu.add_choices(["Scan IAM misconfigurations", "Scan misconfigured containers", "Scan misconfigured podsecuritypolicies","Scan misconfigured network policies"])
-                    check_choice = menu.select("select choice to scan")
-                    if check_choice == 'Scan IAM misconfigurations':
-                        menu.add_choices(["total check","user check"])
-                        check_user_choice = menu.select("select choice to scan")
-                        if check_user_choice == 'user check':
-                            user_name = input("Give username: ")
-                ser_hunt.apiserver_secure(service_discovery_result, token,check_choice,user_name)
+                    individual_checks = True
+                    while individual_checks:
+                        menu.add_choices(["Scan IAM misconfigurations", "Scan misconfigured containers", "Scan misconfigured podsecuritypolicies","Scan misconfigured network policies"])
+                        check_choice = menu.select("select choice to scan")
+                        if check_choice == 'Scan IAM misconfigurations':
+                            menu.add_choices(["total check","user check"])
+                            check_user_choice = menu.select("select choice to scan")
+                            if check_user_choice == 'user check':
+                                user_name = input("Give username: ")
+                        ser_hunt.apiserver_secure(service_discovery_result, token,check_choice,user_name)
+                        menu.add_choices(["continue individual checks", "exit"])
+                        result_process = menu.select("Chose one the below options:")
+                        if result_process == 'exit':
+                            individual_checks = False
+                else:
+                    ser_hunt.apiserver_secure(service_discovery_result, token, check_choice, user_name)
             else:
                 ser_hunt.apiserver_secure(service_discovery_result)
     if kubelet_rw:
