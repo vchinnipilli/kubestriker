@@ -6,6 +6,6 @@ prompt-toolkit==1.0.15
 SelectMenu
 pyfiglet==0.8.post1
 PyYAML==5.4
-requests==2.24.0
+requests==2.31.0
 urllib3==1.26.5
 websocket-client==0.53.0
