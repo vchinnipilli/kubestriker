@@ -1,6 +1,6 @@
 import socket
 import warnings
-from kubestrike.bars import prefix, sub_prefix, service_open, print_msg_box
+from kubestriker.bars import prefix, sub_prefix, service_open, print_msg_box
 
 warnings.filterwarnings("ignore")
 

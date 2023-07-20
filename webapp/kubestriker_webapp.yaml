@@ -1,0 +1,269 @@
+
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: kubestriker
+  
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: db-service-new
+  namespace: kubestriker
+  labels:
+    name: kubestriker
+    app: kubestriker
+spec:
+  type: ClusterIP
+  selector:
+    app: kubestriker
+    component: database
+  ports:
+    - port: 8000
+      protocol: TCP
+      targetPort: 8000
+      name: db-service
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kubestriker-db
+  namespace: kubestriker
+  labels:
+    app: kubestriker
+    release: kubestriker
+    component: database
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kubestriker
+      release: kubestriker
+      component: database
+      hasDNS: "true"
+  template:
+    metadata:
+      labels:
+        app: kubestriker
+        release: kubestriker
+        component: database
+        hasDNS: "true"
+    spec:
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            - labelSelector:
+                matchLabels:
+                  app: kubestriker
+                  release: "kubestriker"
+                  component: database
+              topologyKey: kubernetes.io/hostname
+      terminationGracePeriodSeconds: 60
+      volumes:
+        - name: kubestriker-db-storage
+          emptyDir: {}
+      containers:
+        - name: kubestriker-db
+          image: "cloudsecguy/kubestrikerdb:v1.0.0"
+          env:
+            - name: DYNAMODB_ACCESS_KEY_ID
+              value: "anything"
+            - name: DYNAMODB_ACCESS_KEY
+              value: "anything"
+            - name: DYNAMODB_REGION
+              value: "ap-southeast-2"
+          volumeMounts:
+            - name: kubestriker-db-storage
+              mountPath: /data
+              subPath: data
+          securityContext:
+            allowPrivilegeEscalation: false
+          ports:
+            - name: db-service
+              containerPort: 8000
+              protocol: "TCP"
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: python-svc
+  namespace: kubestriker
+  labels:
+    name: kubestriker
+    app: kubestriker
+    component: server
+spec:
+  type: ClusterIP
+  selector:
+    app: kubestriker
+    component: server
+  ports:
+    - port: 8080
+      protocol: TCP
+      targetPort: 8080
+      name: python-svc
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kubestriker-python
+  namespace: kubestriker
+  labels:
+    app: kubestriker
+    release: kubestriker
+    component: server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kubestriker
+      release: kubestriker
+      component: server
+  template:
+    metadata:
+      labels:
+        app: kubestriker
+        release: kubestriker
+        component: server
+    spec:
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            - labelSelector:
+                matchLabels:
+                  app: kubestriker
+                  release: "kubestriker"
+                  component: server
+              topologyKey: kubernetes.io/hostname
+      terminationGracePeriodSeconds: 60
+      volumes:
+        - name: kubestriker-python-storage
+          emptyDir: {}
+      containers:
+        - name: kubestriker-python
+          image: cloudsecguy/kubestrikerbe:v1.0.0
+          env:
+            - name: DYNAMODB_URL
+              value: "http://$(DB_SERVICE_NEW_SERVICE_HOST):$(DB_SERVICE_NEW_SERVICE_PORT)"
+            - name: DYNAMODB_ACCESS_KEY_ID
+              value: "anything"
+            - name: DYNAMODB_ACCESS_KEY
+              value: "anything"
+            - name: DYNAMODB_REGION
+              value: "ap-southeast-2"
+          volumeMounts:
+            - name: kubestriker-python-storage
+              mountPath: /data
+              subPath: data
+          securityContext:
+            allowPrivilegeEscalation: false
+          ports:
+            - name: python-expose
+              containerPort: 8080
+              protocol: "TCP"
+            - name: db-expose
+              containerPort: 8000
+              protocol: "TCP"
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: fe-svc
+  namespace: kubestriker
+  labels:
+    name: kubestriker
+    app: kubestriker-fe
+    component: frontend-server
+spec:
+  type: LoadBalancer
+  selector:
+    app: kubestriker-fe
+    component: frontend-server
+  ports:
+    - port: 8080
+      protocol: TCP
+      targetPort: 80
+      name: ks-fe-svc
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kubestriker-fe
+  namespace: kubestriker
+  labels:
+    app: kubestriker-fe
+    release: kubestriker
+    component: frontend-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kubestriker-fe
+      release: kubestriker
+      component: frontend-server
+  template:
+    metadata:
+      labels:
+        app: kubestriker-fe
+        release: kubestriker
+        component: frontend-server
+    spec:
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            - labelSelector:
+                matchLabels:
+                  app: kubestriker-fe
+                  release: "kubestriker"
+                  component: frontend-server
+              topologyKey: kubernetes.io/hostname
+      terminationGracePeriodSeconds: 60
+      volumes:
+        - name: kubestriker-python-storage
+          emptyDir: {}
+      containers:
+        - name: kubestriker-python
+          image: "cloudsecguy/kubestrikerfe:v1.0.0"
+          env:
+            - name: API_URL
+              value: "http://a6d09b7fb66b644a68e97811d22d1fcf-663736315.ap-southeast-2.elb.amazonaws.com/"
+          volumeMounts:
+            - name: kubestriker-python-storage
+              mountPath: /data
+              subPath: data
+          securityContext:
+            allowPrivilegeEscalation: false
+          ports:
+            - name: kubestriker-fe
+              containerPort: 80
+              protocol: "TCP"
+            - name: python-server
+              containerPort: 8888
+              protocol: "TCP"
+
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+    name: backend-ingress
+    namespace: kubestriker
+    annotations:
+      nginx.ingress.kubernetes.io/enable-cors: "true"
+      nginx.ingress.kubernetes.io/cors-allow-methods: "GET, PUT, POST, DELETE, PATCH, OPTIONS"
+      nginx.ingress.kubernetes.io/cors-allow-origin: "*"
+      nginx.ingress.kubernetes.io/cors-allow-credentials: "true"
+spec:
+    rules:
+    - http:
+        paths:
+        - path: /
+          backend:
+            serviceName: python-svc
+            servicePort: 8080

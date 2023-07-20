@@ -1,5 +1,5 @@
 import json
-from kubestrike.bars import prefix, sub_prefix,service_open, resource_available, print_msg_box
+from kubestriker.bars import prefix, sub_prefix,service_open, resource_available, print_msg_box
 
 class Validate_Roles(object):
     def __init__(self,file_obj=None):

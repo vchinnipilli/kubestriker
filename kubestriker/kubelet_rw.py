@@ -1,5 +1,5 @@
 import requests
-from kubestrike.bars import prefix, sub_prefix, service_open
+from kubestriker.bars import prefix, sub_prefix, service_open
 
 
 class Kubelet_RW(object):
