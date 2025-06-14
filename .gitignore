@@ -1,1 +1,42 @@
 *__pycache__*
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
+*.coverage
+.tox/
+.nox/
+
+# Claude
+.claude/*
+
+# Virtual environments
+venv/
+env/
+ENV/
+virtualenv/
+.venv/
+
+# Poetry
+dist/
+
+# Build artifacts
+build/
+*.egg-info/
+*.egg
+.eggs/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Temporary files
+*.tmp
+*.bak
+.temp/
