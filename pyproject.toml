@@ -1,0 +1,100 @@
+[tool.poetry]
+name = "kubestriker"
+version = "1.0.0"
+description = "A Blazing fast Security Auditing tool for Kubernetes"
+authors = ["vasant chinnipilli <vchinnipilli@gmail.com>"]
+readme = "README.md"
+homepage = "https://github.com/vchinnipilli/kubestriker"
+repository = "https://github.com/vchinnipilli/kubestriker"
+classifiers = [
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: System Administrators",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: Apache Software License",
+    "Topic :: Security",
+    "Topic :: Software Development :: Testing"
+]
+packages = [{include = "kubestriker"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+colorama = ">=0.4.4"
+colored = ">=1.4.2"
+progress = ">=1.5"
+prompt-toolkit = ">=3.0.0"
+pyfiglet = ">=0.8"
+PyYAML = ">=6.0"
+requests = ">=2.24.0"
+urllib3 = ">=1.25.10,<2.0"
+websocket-client = ">=0.53.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.0"
+pytest-cov = "^4.1.0"
+pytest-mock = "^3.11.0"
+
+[tool.poetry.scripts]
+test = "pytest:main"
+tests = "pytest:main"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = [
+    "-ra",
+    "--strict-markers",
+    "--strict-config",
+    "--cov=kubestriker",
+    "--cov-branch",
+    "--cov-report=html:htmlcov",
+    "--cov-report=xml:coverage.xml",
+    "--cov-report=term-missing:skip-covered",
+    "--cov-fail-under=0",
+]
+testpaths = ["tests"]
+python_files = ["test_*.py", "*_test.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+markers = [
+    "unit: Unit tests",
+    "integration: Integration tests",
+    "slow: Tests that take a long time to run",
+]
+
+[tool.coverage.run]
+source = ["kubestriker"]
+branch = true
+omit = [
+    "*/tests/*",
+    "*/test_*",
+    "*/__pycache__/*",
+    "*/venv/*",
+    "*/virtualenv/*",
+    "setup.py",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if self.debug:",
+    "if settings.DEBUG",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if 0:",
+    "if __name__ == .__main__.:",
+    "class .*\\bProtocol\\):",
+    "@(abc\\.)?abstractmethod",
+]
+show_missing = true
+precision = 2
+
+[tool.coverage.html]
+directory = "htmlcov"
+
+[tool.coverage.xml]
+output = "coverage.xml"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
